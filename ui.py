@@ -16,17 +16,15 @@ def print_items(label, items="empty"):
         print(f"({items})")
 
 
-def get_input(label, items = []):
+def get_input(label, items=[]):
     print(label)
-    if type(items) == list:
+    if items == []:
+        return input(f"{label}: ")
+    else:
         user_inputs = []
         for item in items:
             user_inputs.append(input(f"{input}: "))
         return user_inputs
-    elif type(items) == str:
-        return input(f"{items}: ")
-    else:
-        raise ValueError("Invalid input call!")
 
 
 def print_error(message="Invalid input, try again"):
