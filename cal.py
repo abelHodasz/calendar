@@ -13,11 +13,11 @@ def main():
     while True:
         ui.print_items()
         try:
-            choose(int(ui.get_input("","Menu number:")), menu)
+            choose(int(ui.get_input("", "Menu number:")), menu)
         except ValueError:
             ui.print_error("Invalid input, try again!")
             continue
                    
 
-if __name__="__main__":
+if __name__ == "__main__":
     main()

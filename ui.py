@@ -27,3 +27,7 @@ def get_input(label, items):
         return input(f"{items}: ")
     else:
         raise ValueError("Invalid input call!")
+
+
+def print_error(message):
+    print(f"Error: {message}")
