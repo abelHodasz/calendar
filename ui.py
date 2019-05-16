@@ -16,7 +16,7 @@ def print_items(label, items="empty"):
         print(f"({items})")
 
 
-def get_input(label, items):
+def get_input(label, items = []):
     print(label)
     if type(items) == list:
         user_inputs = []
@@ -29,5 +29,5 @@ def get_input(label, items):
         raise ValueError("Invalid input call!")
 
 
-def print_error(message):
+def print_error(message="Invalid input, try again"):
     print(f"Error: {message}")
