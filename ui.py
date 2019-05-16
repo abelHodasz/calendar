@@ -17,10 +17,10 @@ def print_items(label, items="empty"):
 
 
 def get_input(label, items=[]):
-    print(label)
     if items == []:
         return input(f"{label}: ")
     else:
+        print(label)
         user_inputs = []
         for item in items:
             user_inputs.append(input(f"{input}: "))

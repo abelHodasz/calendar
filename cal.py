@@ -4,12 +4,12 @@ import common
 import storage
 
 
-def choose(menu_number, menu):
+def choose(menu):
     menu_item = {item: number for number, item in enumerate(menu)}
     while True:
         ui.print_menu("Menu:", menu)
         try:
-            choice = int(ui.get_input("", "Your choice: "))
+            choice = int(ui.get_input("Your choice"))
             if choice == menu_item["Quit"]:
                 pass
             elif choice == menu_item["Schedule a new meeting"]:
@@ -24,13 +24,7 @@ def choose(menu_number, menu):
 
 def main():
     menu = ["Quit", "Schedule a new meeting", "Cancel a meeting"]
-    while True:
-        ui.print_items()
-        try:
-            choose(int(ui.get_input("", "Menu number:")), menu)
-        except ValueError:
-            ui.print_error()
-            continue
+    choose(menu)
                    
 
 if __name__ == "__main__":
